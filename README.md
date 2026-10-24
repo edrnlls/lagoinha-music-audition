@@ -1,15 +1,19 @@
 # Audição Lagoinha Music Toledo
 
-Landing page do processo de audição do ministério de louvor da Igreja Batista da Lagoinha Toledo.
+Landing page estática do processo de audição do ministério de louvor da Igreja Batista da Lagoinha Toledo.
 
-Repositório: [lagoinha-music-audition](https://github.com/edrnlls/lagoinha-music-audition)
+Repositório: https://github.com/edrnlls/lagoinha-music-audition
+
+O site publicado é só arquivo estático. Não há servidor, banco, cookies, login nem variáveis de ambiente. A página não pede câmera, microfone, localização nem outros recursos do aparelho. O único destino externo é o formulário público de inscrição, aberto quando a pessoa clica no botão.
 
 ## Tecnologias
 
 - React 19
 - Vite 8
 - Tailwind CSS 3
-- Motion (Framer Motion)
+- Motion
+
+A fonte Inter fica no próprio site. Nenhuma fonte é carregada de outro domínio.
 
 ## Como rodar localmente
 
@@ -33,7 +37,7 @@ Repositório: [lagoinha-music-audition](https://github.com/edrnlls/lagoinha-musi
 npm run build
 ```
 
-Os arquivos finais ficam na pasta `dist/`. O `base` do Vite é relativo (`./`), então as imagens e o JavaScript funcionam tanto no servidor local quanto no GitHub Pages.
+Os arquivos finais ficam na pasta `dist/`. Essa pasta não entra no Git.
 
 ## Personalização
 
@@ -41,8 +45,12 @@ Os arquivos finais ficam na pasta `dist/`. O `base` do Vite é relativo (`./`), 
 - As cores ficam no `tailwind.config.js`.
 - Os textos ficam nos componentes em `src/components`.
 
-## Deploy
+## Deploy na Vercel
 
-O workflow `.github/workflows/pages.yml` publica a pasta `dist` no GitHub Pages a cada push na branch `main`.
+O `vercel.json` define o build `npm run build`, a pasta `dist` e cabeçalhos que limitam scripts, imagens e fontes ao próprio endereço do site.
 
-Nas configurações do repositório, em Pages, a origem precisa ser **GitHub Actions**.
+1. A branch `main` deste repositório é a fonte.
+2. Em [vercel.com/new](https://vercel.com/new), importe somente `lagoinha-music-audition`. Se a Vercel pedir acesso ao GitHub, não autorize todos os repositórios.
+3. Confirme o framework Vite e publique.
+
+Não há GitHub Actions. A pasta `.vercel`, criada pela CLI na máquina de quem publica, fica fora do Git. Nenhum token fica neste projeto.
