@@ -10,10 +10,6 @@
   font-display: swap;
 }
 
-.font-ballinger {
-  font-family: "Ballinger", Impact, sans-serif;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -31,21 +27,15 @@ body {
   }
 }
 
-.banner-photo {
-  background-image: var(--banner-mobile);
-}
-
-@media (min-width: 768px) {
-  .banner-photo {
-    background-image: var(--banner-desktop);
-  }
-}
-
 .banner-zoom {
   animation: banner-zoom 18s ease-in-out infinite alternate;
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .banner-zoom {
     animation: none;
   }
