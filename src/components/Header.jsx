@@ -4,7 +4,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-5 lg:px-6">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <span className="text-`primary`">Audição Lagoinha Music</span>
+            <span className="text-xl font-bold text-primary">Audição Lagoinha Music</span>
           </div>
           <nav className="hidden md:flex space-x-8">
             <a href="#sobre" className="text-gray-500 hover:text-primary transition">Sobre</a>
