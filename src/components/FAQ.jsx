@@ -57,7 +57,7 @@ export default function FAQ() {
                   aria-expanded={isOpen}
                   aria-controls={panelId}
                   onClick={() => setOpen(isOpen ? null : index)}
-                  className="flex w-full items-center justify-between gap-4 bg-white p-5 text-left text-lg font-medium text-black hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  className="flex w-full items-center justify-between gap-4 bg-white p-5 text-left text-base font-medium text-black hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                 >
                   {faq.q}
                   <span className="text-primary" aria-hidden="true">{isOpen ? '−' : '+'}</span>
