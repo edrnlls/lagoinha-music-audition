@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Ballinger";
+  src: url("./assets/fonts/BallingerX-Condensed-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-ballinger {
+  font-family: "Ballinger", Impact, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-gray-800;
+}
+
+@keyframes banner-zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.06);
+  }
+}
+
+.banner-photo {
+  background-image: var(--banner-mobile);
+}
+
+@media (min-width: 768px) {
+  .banner-photo {
+    background-image: var(--banner-desktop);
+  }
+}
+
+.banner-zoom {
+  animation: banner-zoom 18s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner-zoom {
+    animation: none;
+  }
+}
